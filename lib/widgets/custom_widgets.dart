@@ -23,43 +23,43 @@ class CustomTextField extends StatelessWidget {
       decoration: InputDecoration(
         labelText: label,
         labelStyle: GoogleFonts.poppins(
-          color: Colors.grey[600], // Label color (default)
+          color: Colors.grey[600],
 
         ),
-        filled: true, // Make background color visible
-        fillColor: Colors.white10, // Background color when not focused
+        filled: true,
+        fillColor: Colors.white10,
         border: OutlineInputBorder(
           borderSide: BorderSide(
-            color: Colors.grey, // Border color when not focused
-            width: 2, // Default border width
+            color: Colors.grey,
+            width: 2,
           ),
         ),
         enabledBorder: OutlineInputBorder(
           borderSide: BorderSide(
-            color: Colors.grey[600]!, // Border color when not focused
-            width: 2, // Border width
+            color: Colors.grey[600]!,
+            width: 2,
           ),
         ),
         focusedBorder: OutlineInputBorder(
           borderSide: BorderSide(
-            color: Colors.indigo, // Border color when focused
-            width: 2, // Thicker border when focused
+            color: Colors.indigo,
+            width: 2,
           ),
         ),
         focusedErrorBorder: OutlineInputBorder(
           borderSide: BorderSide(
-            color: Colors.indigo, // Focused error border color
-            width: 2, // Thicker error border when focused
+            color: Colors.indigo,
+            width: 2,
           ),
         ),
         contentPadding: EdgeInsets.symmetric(
-          vertical: 15.0, // Increase vertical padding
-          horizontal: 20.0, // Increase left/right padding
+          vertical: 15.0,
+          horizontal: 20.0,
         ),
-        focusColor: Colors.blue, // Color when the field is focused
+        focusColor: Colors.blue,
       ),
-      style: TextStyle(
-        color: Colors.grey[800], // Text color (shades of grey)
+      style: GoogleFonts.roboto(
+        color: Colors.grey[900],
       ),
     );
   }

@@ -16,6 +16,7 @@ class LoginScreen extends StatelessWidget {
   Future<void> _loginWithEmail(String email, String password) async {
     try {
       _authService.signInWithEmailPassword(email, password);
+      Get.offAll(() => const HomeScreen());
       Get.snackbar("Success", "Logged in successfully");
     } catch (e) {
       Get.snackbar("Error", e.toString());
@@ -28,7 +29,7 @@ class LoginScreen extends StatelessWidget {
 
       if (user != null) {
         Get.snackbar("Success", "Google sign-in successful");
-        Get.offAll(() => const HomeScreen()); // Navigate to home page
+        Get.offAll(() => const HomeScreen());
       } else {
         Get.snackbar("Cancelled", "Google sign-in was cancelled");
       }
@@ -42,7 +43,7 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: SingleChildScrollView( // Add this to prevent overflow when keyboard is open
+      body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
@@ -61,7 +62,7 @@ class LoginScreen extends StatelessWidget {
                       style: GoogleFonts.poppins(
                         fontSize: 26,
                         fontWeight: FontWeight.bold,
-                        color: Colors.indigo,
+                        color: Colors.indigoAccent,
                       ),
                     ),
                     SizedBox(height: 30),
@@ -103,7 +104,7 @@ class LoginScreen extends StatelessWidget {
                         child: Text(
                           "Forgot Password?",
                           style: GoogleFonts.poppins(
-                            color: Colors.indigo,
+                            color: Colors.indigoAccent,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -125,7 +126,7 @@ class LoginScreen extends StatelessWidget {
                     _loginWithEmail(email, password);
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.indigo,
+                    backgroundColor: Colors.indigoAccent,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(7),
                     ),
@@ -141,7 +142,7 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
 
-              // Small dash divider
+
               SizedBox(height: 25),
               TextButton(
                 onPressed: () {
@@ -162,7 +163,7 @@ class LoginScreen extends StatelessWidget {
                 style: GoogleFonts.poppins(
 
                   fontWeight: FontWeight.bold,
-                  color: Colors.indigo,
+                  color: Colors.indigoAccent,
                 ),
               ),
               SizedBox(height: 20),
@@ -175,7 +176,7 @@ class LoginScreen extends StatelessWidget {
                   size: 30,
                 ),
                 style: IconButton.styleFrom(
-                  backgroundColor: Colors.grey,
+                  backgroundColor: Colors.yellow[700],
                   padding: EdgeInsets.all(16), // Good spacing
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12),
