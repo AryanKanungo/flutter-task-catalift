@@ -29,6 +29,13 @@ Google Sign-In works.
 Register & Home pages not built yet.
 
 
+Screenshots - 
+
+<img src="https://github.com/user-attachments/assets/642f893c-6d53-46cd-9a88-f13d9340f1a0" width="300"/>
+
+<img src="https://github.com/user-attachments/assets/3d2f1f7a-c1ed-42d6-9408-0d68b4c05b2f" width="300"/>
+
+
 
 
    
